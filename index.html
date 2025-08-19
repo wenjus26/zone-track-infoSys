@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zone Track Information System - GDIZ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .text-primary-blue {
+            color: #002D62;
+        }
+        .bg-primary-blue {
+            background-color: #002D62;
+        }
+        .text-accent-gold {
+            color: #FFC107;
+        }
+        .bg-accent-gold {
+            background-color: #FFC107;
+        }
+        .hover\:bg-accent-gold-dark:hover {
+            background-color: #e6b006;
+        }
+
+        /* Définition des animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .animate-fadeIn { animation: fadeIn 0.8s ease-out forwards; }
+        .animate-slideInLeft { animation: slideInLeft 0.8s ease-out forwards; }
+        .animate-slideInRight { animation: slideInRight 0.8s ease-out forwards; }
+
+        .transition-transform-hover {
+            transition-property: transform;
+            transition-duration: 300ms;
+        }
+        .group:hover .transition-transform-hover {
+            transform: translateY(-5px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Barre de navigation - Reste statique -->
+    <div class="bg-primary-blue text-white py-4 px-6 flex justify-between items-center z-10 sticky top-0">
+        <div class="text-xl font-bold">Zone Track</div>
+        <div class="space-x-4">
+            <button onclick="setLanguage('fr')" class="font-semibold hover:underline">FR</button>
+            <button onclick="setLanguage('en')" class="font-semibold hover:underline">EN</button>
+        </div>
+    </div>
+
+    <main id="content">
+        <!-- Contenu en Français -->
+        <div data-lang="fr">
+            <!-- Section Héros -->
+            <section class="bg-primary-blue text-white py-20 px-4 text-center animate-fadeIn">
+                <div class="container mx-auto">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">Zone Track Information System</h1>
+                    <p class="text-lg sm:text-xl font-light max-w-2xl mx-auto mb-8">
+                        La plateforme qui transforme la logistique en une traçabilité précise et en temps réel pour une prise de décision éclairée.
+                    </p>
+                    <a href="mailto:rejuste.wenoumi@epitech.eu" class="bg-accent-gold text-primary-blue font-bold py-3 px-8 rounded-full shadow-lg hover:bg-accent-gold-dark transition-colors duration-300">
+                        Démarrer maintenant
+                    </a>
+                </div>
+            </section>
+
+            <!-- Section Problématique -->
+            <section class="py-16 px-4">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-primary-blue text-center mb-12 animate-fadeIn">Le Chaos Logistique</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-md transform transition-transform-hover group animate-slideInLeft delay-100">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Opérations Lentes</h3>
+                            <p class="text-gray-600">Les processus manuels ralentissent considérablement les flux de travail.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md transform transition-transform-hover group animate-slideInLeft delay-200">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Erreurs et Retards</h3>
+                            <p class="text-gray-600">La saisie manuelle des données augmente le risque d'erreurs et de retards, compromettant la sécurité.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md transform transition-transform-hover group animate-slideInRight delay-300">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Traçabilité Limitée</h3>
+                            <p class="text-gray-600">Manque de visibilité sur le mouvement des marchandises et difficulté à obtenir des informations à jour.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md transform transition-transform-hover group animate-slideInRight delay-400">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Rapports Incomplets</h3>
+                            <p class="text-gray-600">L'absence d'un tableau de bord de décision impacte la prise de décision stratégique.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Solution -->
+            <section class="bg-blue-50 py-16 px-4 animate-fadeIn delay-500">
+                <div class="container mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-primary-blue mb-8">Notre Solution</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+                        Zone Track Information System est l'arme numérique de GDIZ contre le chaos logistique. C'est une plateforme qui apporte le rêve d'une zone industrielle moderne avec des opérations logistiques traçables en temps réel.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-md group transform transition-transform-hover">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Fiabilité des Données</h3>
+                            <p class="text-gray-600">Assure l'exactitude des informations et réduit les erreurs humaines.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md group transform transition-transform-hover">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Moins de Papier</h3>
+                            <p class="text-gray-600">Élimine la paperasse, rend les processus plus fluides et écologiques.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md group transform transition-transform-hover">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Traçabilité Complète</h3>
+                            <p class="text-gray-600">Assure un suivi précis, rapide et en temps réel des opérations logistiques.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Workflow -->
+            <section class="bg-blue-50 py-16 px-4">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-primary-blue text-center mb-12 animate-fadeIn">Le Workflow Opérationnel</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+                        Le système assure un flux de travail continu, de la création de l'opération à sa clôture, garantissant une traçabilité complète à chaque étape.
+                    </p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-md animate-fadeIn delay-100">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Créer une opération</h3>
+                            <p class="text-gray-600">L'opération est initiée dans le système.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md animate-fadeIn delay-200">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Pesée initiale</h3>
+                            <p class="text-gray-600">Un agent effectue la pesée initiale et approuve les données pour obtenir un numéro de jeton.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md animate-fadeIn delay-300">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Chargement / Déchargement</h3>
+                            <p class="text-gray-600">L'agent remplit la description du chargement ou déchargement et la fait valider.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md animate-fadeIn delay-400">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Générer un Gate Pass</h3>
+                            <p class="text-gray-600">Un "Gate Pass" est généré après approbation. S'il s'agit d'un conteneur, il est scellé avant l'impression du "Gate Pass".</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md animate-fadeIn delay-500">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Pesée finale et sortie</h3>
+                            <p class="text-gray-600">Le chauffeur présente le "Gate Pass" pour la pesée finale et l'information est validée à la sortie.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md animate-fadeIn delay-600">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Enregistrement et Envoi Automatique</h3>
+                            <p class="text-gray-600">À la fin de l'opération, les documents de support sont enregistrés et envoyés automatiquement vers un dossier OneDrive dédié pour l'entreprise et le département requis, sans intervention humaine.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Documents -->
+            <section class="py-16 px-4">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-primary-blue text-center mb-12 animate-fadeIn">Visualisation des Documents</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12 text-center">
+                        Accédez aux documents clés de chaque opération pour une traçabilité complète.
+                    </p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <a href="WAT_SLIP_BJ13-AWMo.pdf" target="_blank" class="cursor-pointer bg-white p-6 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-transform hover:scale-105 animate-slideInLeft delay-100">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue text-center">Jeton d'autorisation de pesée BJ13</h3>
+                            <p class="text-gray-600 text-sm text-center">Ouvrir le document</p>
+                        </a>
+                        <a href="GatePass_BJ13_GP-20250620-002.pdf" target="_blank" class="cursor-pointer bg-white p-6 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-transform hover:scale-105 animate-slideInLeft delay-200">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue text-center">Gate Pass BJ13</h3>
+                            <p class="text-gray-600 text-sm text-center">Ouvrir le document</p>
+                        </a>
+                        <a href="WAT_SLIP_BJ21-RBc4.pdf" target="_blank" class="cursor-pointer bg-white p-6 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-transform hover:scale-105 animate-slideInRight delay-300">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue text-center">Jeton d'autorisation de pesée BJ21</h3>
+                            <p class="text-gray-600 text-sm text-center">Ouvrir le document</p>
+                        </a>
+                        <a href="TECG2589645-ZO0H_BJ21_GP-20250617-003.pdf" target="_blank" class="cursor-pointer bg-white p-6 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-transform hover:scale-105 animate-slideInRight delay-400">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue text-center">Gate Pass BJ21</h3>
+                            <p class="text-gray-600 text-sm text-center">Ouvrir le document</p>
+                        </a>
+                    </div>
+
+
+                </div>
+            </section>
+            
+            <!-- Section de contact direct -->
+            <section class="bg-blue-50 py-16 px-4" id="contact-info">
+                <div class="container mx-auto text-center animate-fadeIn delay-200">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-primary-blue mb-8">Contactez-nous directement</h2>
+                    <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+                        Pour toute question ou pour une démo, n'hésitez pas à nous écrire à l'adresse suivante :
+                    </p>
+                    <a href="mailto:rejuste.wenoumi@epitech.eu" class="text-2xl font-bold text-primary-blue underline hover:no-underline transition-all duration-300">
+                        rejuste.wenoumi@epitech.eu
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contenu en Anglais -->
+        <div data-lang="en" style="display:none;">
+            <!-- Hero Section -->
+            <section class="bg-primary-blue text-white py-20 px-4 text-center animate-fadeIn">
+                <div class="container mx-auto">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">Zone Track Information System</h1>
+                    <p class="text-lg sm:text-xl font-light max-w-2xl mx-auto mb-8">
+                        The platform that transforms logistics into precise, real-time traceability for informed decision-making.
+                    </p>
+                    <a href="mailto:rejuste.wenoumi@epitech.eu" class="bg-accent-gold text-primary-blue font-bold py-3 px-8 rounded-full shadow-lg hover:bg-accent-gold-dark transition-colors duration-300">
+                        Get Started Now
+                    </a>
+                </div>
+            </section>
+
+            <!-- Problem Section -->
+            <section class="py-16 px-4">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-primary-blue text-center mb-12 animate-fadeIn">The Logistics Chaos</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-md transform transition-transform-hover group animate-slideInLeft delay-100">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Slow Operations</h3>
+                            <p class="text-gray-600">Manual processes significantly slow down workflows.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md transform transition-transform-hover group animate-slideInLeft delay-200">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Errors and Delays</h3>
+                            <p class="text-gray-600">Manual data entry increases the risk of errors and delays, compromising security.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md transform transition-transform-hover group animate-slideInRight delay-300">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Limited Traceability</h3>
+                            <p class="text-gray-600">Lack of visibility over goods movement and difficulty obtaining up-to-date information.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md transform transition-transform-hover group animate-slideInRight delay-400">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Incomplete Reports</h3>
+                            <p class="text-gray-600">The lack of a decision-making dashboard negatively impacts strategic decision-making.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solution Section -->
+            <section class="bg-blue-50 py-16 px-4 animate-fadeIn delay-500">
+                <div class="container mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-primary-blue mb-8">Our Solution</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+                        The Zone Track Information System is GDIZ's digital weapon against logistics chaos. It's a platform that brings the dream of a modern industrial zone with real-time traceable logistics operations to life.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-md group transform transition-transform-hover">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Data Reliability</h3>
+                            <p class="text-gray-600">Ensures information accuracy and reduces human error.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md group transform transition-transform-hover">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Paperwork Elimination</h3>
+                            <p class="text-gray-600">Eliminates paperwork, making processes smoother and more eco-friendly.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md group transform transition-transform-hover">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Complete Traceability</h3>
+                            <p class="text-gray-600">Provides precise, fast, and real-time tracking of logistics operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Workflow Section -->
+            <section class="bg-blue-50 py-16 px-4">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-primary-blue text-center mb-12 animate-fadeIn">The Operational Workflow</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+                        The system ensures a seamless workflow, from the creation of the operation to its closure, guaranteeing complete traceability at every step.
+                    </p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-md animate-fadeIn delay-100">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Create an Operation</h3>
+                            <p class="text-gray-600">The operation is initiated in the system.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md animate-fadeIn delay-200">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Initial Weighing</h3>
+                            <p class="text-gray-600">An agent performs the initial weighing and approves the data to get a token number.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md animate-fadeIn delay-300">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Loading / Unloading</h3>
+                            <p class="text-gray-600">The agent fills in the loading or unloading description and submits it for validation.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md animate-fadeIn delay-400">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Generate a Gate Pass</h3>
+                            <p class="text-gray-600">A "Gate Pass" is generated after approval. If it's a container, it's sealed before printing the "Gate Pass".</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md animate-fadeIn delay-500">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Final Weighing and Exit</h3>
+                            <p class="text-gray-600">The driver presents the "Gate Pass" for the final weighing and the information is validated at the exit.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md animate-fadeIn delay-600">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue">Automatic Saving and Sending</h3>
+                            <p class="text-gray-600">At the end of the operation, the supporting documents are automatically saved and sent to a dedicated OneDrive folder for the specific company and required department, with no human intervention.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Documents -->
+            <section class="py-16 px-4">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-primary-blue text-center mb-12 animate-fadeIn">Document Visualization</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12 text-center">
+                        Access key documents for each operation for complete traceability.
+                    </p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <a href="WAT_SLIP_BJ13-AWMo.pdf" target="_blank" class="cursor-pointer bg-white p-6 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-transform hover:scale-105 animate-slideInLeft delay-100">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue text-center">Weight Authorization Token BJ13</h3>
+                            <p class="text-gray-600 text-sm text-center">Open document</p>
+                        </a>
+                        <a href="GatePass_BJ13_GP-20250620-002.pdf" target="_blank" class="cursor-pointer bg-white p-6 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-transform hover:scale-105 animate-slideInLeft delay-200">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue text-center">Gate Pass BJ13</h3>
+                            <p class="text-gray-600 text-sm text-center">Open document</p>
+                        </a>
+                        <a href="WAT_SLIP_BJ21-RBc4.pdf" target="_blank" class="cursor-pointer bg-white p-6 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-transform hover:scale-105 animate-slideInRight delay-300">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue text-center">Weight Authorization Token BJ21</h3>
+                            <p class="text-gray-600 text-sm text-center">Open document</p>
+                        </a>
+                        <a href="TECG2589645-ZO0H_BJ21_GP-20250617-003.pdf" target="_blank" class="cursor-pointer bg-white p-6 rounded-xl shadow-md flex flex-col items-center justify-center transform transition-transform hover:scale-105 animate-slideInRight delay-400">
+                            <h3 class="font-bold text-xl mb-2 text-primary-blue text-center">Gate Pass BJ21</h3>
+                            <p class="text-gray-600 text-sm text-center">Open document</p>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Section de contact direct -->
+            <section class="bg-blue-50 py-16 px-4" id="contact-info">
+                <div class="container mx-auto text-center animate-fadeIn delay-200">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-primary-blue mb-8">Contact us directly</h2>
+                    <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+                        For any questions or for a demo, please feel free to write to us at the following address:
+                    </p>
+                    <a href="mailto:rejuste.wenoumi@epitech.eu" class="text-2xl font-bold text-primary-blue underline hover:no-underline transition-all duration-300">
+                        rejuste.wenoumi@epitech.eu
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-primary-blue text-white py-4 text-center text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Zone Track Information System. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fonction pour changer la langue
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                element.style.display = 'none';
+            });
+            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(element => {
+                element.style.display = 'block';
+            });
+            document.documentElement.lang = lang;
+        }
+
+        // Définir la langue par défaut au chargement de la page
+        window.onload = function() {
+            setLanguage('fr');
+        };
+    </script>
+</body>
+</html>
